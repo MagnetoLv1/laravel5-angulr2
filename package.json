@@ -1,18 +1,47 @@
 {
-  "private": true,
+  "name": "laravel5-angular2",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch-poll": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --watch-poll --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "prod": "gulp --production",
+    "dev": "gulp watch",
+    "postinstall": "cd resources/assets/typescript && typings install"
   },
   "devDependencies": {
-    "axios": "^0.15.3",
-    "bootstrap-sass": "^3.3.7",
-    "jquery": "^3.1.1",
-    "laravel-mix": "^0.8.1",
-    "lodash": "^4.17.4",
-    "vue": "^2.1.10"
+    "bootstrap-sass": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-install": "^0.6.0",
+    "laravel-elixir": "^5.0.0",
+    "laravel-elixir-webpack-ex": "0.0.5",
+    "node-sass": "^3.8.0",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^4.0.0",
+    "ts-loader": "^0.8.2",
+    "typescript": "^2.0.3",
+    "typescript-decorate": "^1.0.0",
+    "typescript-extends": "^1.0.1",
+    "typescript-metadata": "^1.0.0",
+    "typescript-param": "^1.0.0",
+    "typings": "^1.4.0",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "@angular/common": "~2.1.0",
+    "@angular/compiler": "~2.1.0",
+    "@angular/core": "~2.1.0",
+    "@angular/forms": "~2.1.0",
+    "@angular/http": "~2.1.0",
+    "@angular/platform-browser": "~2.1.0",
+    "@angular/platform-browser-dynamic": "~2.1.0",
+    "@angular/router": "~3.1.0",
+    "@angular/upgrade": "~2.1.0",
+    "core-js": "^2.4.1",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.0-beta.12",
+    "systemjs": "0.19.39",
+    "zone.js": "^0.6.25",
+    "angular-in-memory-web-api": "~0.1.5",
+    "bootstrap": "^3.3.7",
+    "underscore": "^1.8.3",
+    "es7-reflect-metadata": "^1.6.0"
   }
 }
